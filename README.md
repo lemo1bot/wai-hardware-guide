@@ -4,6 +4,16 @@ Hey everyone! 👋
 
 So I was trying to set up a w.ai worker node to earn some W points, and man, it was a bit confusing at first. After going through the process and testing different methods, I figured I'd share the easiest way to get it running.
 
+## Need Help? Join Our Community! 🤝
+
+If you run into issues or want to connect with other w.ai users:
+
+- **Follow me on Twitter**: [@bank_of_btc](https://x.com/bank_of_btc) for updates and tips
+- **Join our Telegram group**: [Rosla](https://t.me/rooslaa) for step-by-step guides and crypto insights
+- **Stay updated** with the latest w.ai strategies and community tips
+
+---
+
 ## What is w.ai Worker?
 
 Basically, you run a worker node that contributes your GPU power to w.ai's distributed AI system. You earn W points for your contributions, which might convert to rewards later. Pretty cool way to monetize your GPU!
@@ -210,14 +220,6 @@ pm2 kill
 - **w.ai Dashboard**: https://app.w.ai
 - **QuickPod**: For GPU rentals
 - **Vast**: Alternative GPU rental service
-
-## Need Help? Join Our Community! 🤝
-
-If you run into issues or want to connect with other w.ai users:
-
-- **Follow me on Twitter**: [@bank_of_btc](https://x.com/bank_of_btc) for updates and tips
-- **Join our Telegram group**: [Rosla](https://t.me/rooslaa) for step-by-step guides and crypto insights
-- **Stay updated** with the latest w.ai strategies and community tips
 
 ---
 
