@@ -206,21 +206,29 @@ pm2 kill
 
 ## Where to Get Help
 
-- **Official w.ai Worker Guide**: https://github.com/0xmoei/wai-worker
+- **Official w.ai Documentation**: https://docs.w.ai/w.ai-guide/supported-hardware
 - **w.ai Dashboard**: https://app.w.ai
 - **QuickPod**: For GPU rentals
 - **Vast**: Alternative GPU rental service
 
+## Need Help? Join Our Community! 🤝
+
+If you run into issues or want to connect with other w.ai users:
+
+- **Follow me on Twitter**: [@bank_of_btc](https://x.com/bank_of_btc) for updates and tips
+- **Join our Telegram group**: [Rosla](https://t.me/rooslaa) for step-by-step guides and crypto insights
+- **Stay updated** with the latest w.ai strategies and community tips
+
 ---
 
-**Written by**: [@bank_of_btc](https://x.com/bank_of_btc)
+**Guide created by**: [@bank_of_btc](https://x.com/bank_of_btc)
 
-**Based on**: My actual experience setting up w.ai workers
+**Based on**: My actual experience and official w.ai documentation
 
 **When I tested**: August 2025
 
 ---
 
-*This is my experience setting up w.ai workers. Your setup might be different, but this should get you started!*
+*This is my experience setting up w.ai workers. Your setup might be different, but this should get you started! Need help? Join our Telegram group for support!*
 
 #wai #Worker #GPU #Mining #AI
