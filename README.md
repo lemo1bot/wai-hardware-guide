@@ -93,28 +93,66 @@ free -h
 cat /etc/os-release
 ```
 
-## AMD GPUs (Still Testing)
+## Step-by-Step Installation Guide (What I Actually Did)
 
-I have an old AMD card and tried it - didn't work yet. w.ai says they're working on AMD support, so keep checking for updates.
+### Step 1: Check Your Hardware First
+Before downloading anything, I checked if my machine could handle it:
 
-### How to Check if You Have AMD:
+**On Mac:**
 ```bash
-# Linux
-lspci | grep -i amd
-
-# Windows
-wmic path win32_VideoController get name | findstr -i amd
-
-# Mac (if you have external GPU)
-system_profiler SPDisplaysDataType
+# Check your chip
+system_profiler SPHardwareDataType | grep "Chip"
+# Should show "Apple M1" or "Apple M2" etc.
 ```
 
-## My Tips After Testing
+**On Windows:**
+```cmd
+# Check your GPU
+wmic path win32_VideoController get name
+# Look for NVIDIA in the output
+```
 
-1. **RAM matters** - More RAM = smoother experience
-2. **Keep drivers updated** - Especially on Windows/Linux
-3. **Internet speed** - You need stable connection
-4. **Check their updates** - They add new hardware support
+**On Linux:**
+```bash
+# Check GPU
+nvidia-smi
+# If this works, you're good to go
+```
+
+### Step 2: Download w.ai
+I went to their website (https://w.ai) and downloaded the installer for my OS. Pretty straightforward.
+
+### Step 3: Install It
+**Mac:** Just drag the app to Applications folder
+**Windows:** Run the .exe file as admin
+**Linux:** Used the .deb package they provided
+
+### Step 4: First Launch
+When I first opened it, it asked me to:
+1. Create an account (took 2 minutes)
+2. Verify my email
+3. Choose a plan (they have a free tier)
+
+### Step 5: Test It Out
+I tried their basic AI model first to make sure everything worked. Took about 5 minutes to load the first time, but after that it was fast.
+
+## Common Issues I Ran Into
+
+### "Hardware Not Supported" Error
+Got this on my old Intel Mac. Solution: Need Apple Silicon or NVIDIA GPU.
+
+### "Driver Outdated" on Windows
+My friend had this. Just updated his NVIDIA drivers from their website.
+
+### "Permission Denied" on Linux
+Had to run with sudo the first time, then it worked fine.
+
+## Performance Tips (What I Learned)
+
+1. **Close other apps** - w.ai uses a lot of RAM
+2. **Keep it updated** - New versions are faster
+3. **Use wired internet** - WiFi was slow for large models
+4. **Restart if it's slow** - Sometimes it gets stuck
 
 ## What Actually Worked for Me
 
@@ -122,6 +160,13 @@ system_profiler SPDisplaysDataType
 - **Friend's RTX 3070 PC**: Worked great
 - **Ubuntu server with GTX 1060**: Also worked
 - **Old AMD card**: Not supported yet
+
+## My Tips After Testing
+
+1. **RAM matters** - More RAM = smoother experience
+2. **Keep drivers updated** - Especially on Windows/Linux
+3. **Internet speed** - You need stable connection
+4. **Check their updates** - They add new hardware support
 
 ## Where to Get Help
 
