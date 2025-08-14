@@ -20,6 +20,18 @@ w.ai is an AI platform that requires specific hardware to run efficiently. This 
 - At least 8GB RAM (16GB+ recommended)
 - Stable internet connection
 
+### Check Your Mac Hardware:
+```bash
+# Check your Mac chip
+system_profiler SPHardwareDataType | grep "Chip"
+
+# Check RAM
+system_profiler SPHardwareDataType | grep "Memory"
+
+# Check macOS version
+sw_vers
+```
+
 ## 🪟 Windows
 
 ### Fully Supported ✅
@@ -35,6 +47,26 @@ w.ai is an AI platform that requires specific hardware to run efficiently. This 
 - At least 8GB RAM (16GB+ recommended)
 - Stable internet connection
 
+### Check Your Windows Hardware:
+```cmd
+# Check GPU in Command Prompt
+wmic path win32_VideoController get name
+
+# Check RAM
+wmic computersystem get TotalPhysicalMemory
+
+# Check Windows version
+ver
+```
+
+```powershell
+# Check GPU in PowerShell
+Get-WmiObject -Class Win32_VideoController | Select-Object Name, AdapterRAM
+
+# Check RAM in PowerShell
+Get-WmiObject -Class Win32_ComputerSystem | Select-Object TotalPhysicalMemory
+```
+
 ## 🐧 Linux
 
 ### Fully Supported ✅
@@ -49,6 +81,24 @@ w.ai is an AI platform that requires specific hardware to run efficiently. This 
 - At least 8GB RAM (16GB+ recommended)
 - Stable internet connection
 
+### Check Your Linux Hardware:
+```bash
+# Check GPU
+nvidia-smi
+
+# Alternative GPU check
+lspci | grep -i vga
+
+# Check RAM
+free -h
+
+# Check Linux distribution
+cat /etc/os-release
+
+# Check kernel version
+uname -r
+```
+
 ## 🔬 Experimental Support
 
 ### AMD GPUs (All Platforms)
@@ -57,26 +107,16 @@ w.ai is an AI platform that requires specific hardware to run efficiently. This 
 - **Action**: Keep an eye out for updates
 - **Driver**: Download latest AMD drivers for testing
 
-## 📋 Quick Compatibility Check
-
-### For Mac Users:
+### Check AMD GPU:
 ```bash
-# Check your Mac chip
-system_profiler SPHardwareDataType | grep "Chip"
-```
+# Linux - Check AMD GPU
+lspci | grep -i amd
 
-### For Windows Users:
-```bash
-# Check GPU in Command Prompt
-wmic path win32_VideoController get name
-```
+# Windows - Check AMD GPU
+wmic path win32_VideoController get name | findstr -i amd
 
-### For Linux Users:
-```bash
-# Check GPU
-nvidia-smi
-# or
-lspci | grep -i vga
+# macOS - Check GPU (if any)
+system_profiler SPDisplaysDataType
 ```
 
 ## 🎯 My Experience
@@ -100,7 +140,7 @@ I found the hardware requirements pretty straightforward! If you have:
 - **w.ai Twitter**: https://x.com/wai
 - **Download w.ai**: Available on their website
 
-## 📞 Support
+## �� Support
 
 If your hardware isn't supported:
 - Check the official docs for updates
